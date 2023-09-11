@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
+import firebase from '../firebase'; 
 import { UserAuth } from '../context/AuthContext';
 import Forum from '../components/Forum';
 import "./Account.css";
-
-const Account = () => {
-  const { logOut, user } = UserAuth();
 
   const handleSignOut = async () => {
     try {
@@ -13,10 +11,6 @@ const Account = () => {
       console.log(error);
     }
   };
-
-  import React, { useState, useEffect } from 'react';
-import { UserAuth } from '../context/AuthContext';
-import firebase from '../firebase'; // Import your Firebase configuration
 
 const Account = () => {
   const { user } = UserAuth();
