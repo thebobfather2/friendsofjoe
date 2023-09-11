@@ -101,11 +101,23 @@ const Forum = () => {
             </li>
           ))}
         </ul>
-      </div>
-    ) : (
-      <p>Please sign in to participate in the forum.</p>
-    )}
-  </div>  
+        <form onSubmit={handleSubmit} className="message-form">
+            <input
+              type="text"
+              placeholder="Type your message..."
+              value={newMessage}
+              onChange={(e) => setNewMessage(e.target.value)}
+              className="message-input"
+            />
+            <button type="submit" className="message-button">
+              Post
+            </button>
+          </form>
+        </div>
+      ) : (
+        <p>Please sign in to participate in the forum.</p>
+      )}
+    </div>
   );
 };
 
