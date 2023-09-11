@@ -19,10 +19,10 @@ const Navbar = () => {
     <div className='flex justify-between bg-200 w-full'>
       <div className='navBar'>
       <h1 className='navTitle'>
-        Neighborhood
+        Deep Notes
       </h1>
       <h2 className='navSubtitle'>
-        White Columns Community Information
+        Web3 news and events!
       </h2>
       </div>
       

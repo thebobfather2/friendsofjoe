@@ -15,7 +15,7 @@ const Account = () => {
 
   return (
     <div className='accountBox'>
-      <h1 className='hello'>Hello Neighbor!</h1>
+      <h1 className='hello'>Deep Notes</h1>
       <div className='accountInfo'> 
         <p className='personalGreeting'>Welcome, {user?.displayName}</p>
         <br></br>
@@ -23,7 +23,7 @@ const Account = () => {
           <br></br>
           <h2>PROTECTED CONTENT</h2>
           <br></br>
-          <p>Sensitive information will be posted here.</p>
+          <p>Sensitive information will be posted here about members only content.</p>
         </div>
       </div>
       <button onClick={handleSignOut} className='logoutBtn'>

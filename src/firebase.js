@@ -7,14 +7,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAkZkum45PvomzsnxR860bcmASqT3KaMYE",
-  authDomain: "neighborhood-fe092.firebaseapp.com",
-  databaseURL: "https://neighborhood-fe092-default-rtdb.firebaseio.com",
-  projectId: "neighborhood-fe092",
-  storageBucket: "neighborhood-fe092.appspot.com",
-  messagingSenderId: "646527279541",
-  appId: "1:646527279541:web:580ee2938b86bf0333b9fc",
-  measurementId: "G-DDDH1N8R2D"
+  apiKey: "AIzaSyAfHwROmxtYmiV2AEVEh2zhw-Pmc7fBvT8",
+  authDomain: "cimadowndemo.firebaseapp.com",
+  projectId: "cimadowndemo",
+  storageBucket: "cimadowndemo.appspot.com",
+  messagingSenderId: "76577808138",
+  appId: "1:76577808138:web:c30eace30c35f38e97a4f3",
+  measurementId: "G-P11J0RK96F"
 };
 
 // Initialize Firebase
