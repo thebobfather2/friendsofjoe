@@ -40,19 +40,21 @@ const Forum = () => {
       try {
         const q = query(
           collection(db, 'messages'),
-          orderBy('timestamp', 'desc')
+          orderBy('timestamp', 'desc') // Keep ordering by timestamp in descending order
         );
         const querySnapshot = await getDocs(q);
         const messageData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-        setMessages(messageData);
+        
+        // Reverse the order of messages so that newest messages are at the bottom
+        setMessages(messageData.reverse());
       } catch (error) {
         console.error('Error fetching messages:', error);
       }
     };
-
+  
     fetchMessages();
   }, []);
 
