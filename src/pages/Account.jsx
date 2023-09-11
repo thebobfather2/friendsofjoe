@@ -1,5 +1,6 @@
 import React from 'react';
 import { UserAuth } from '../context/AuthContext';
+import Forum from '../components/Forum';
 import "./Account.css";
 
 const Account = () => {
@@ -19,6 +20,7 @@ const Account = () => {
       <div className='accountInfo'> 
         <p className='personalGreeting'>Welcome, {user?.displayName}</p>
         <br></br>
+        <Forum user={user} />
         <div className='updatesBox'>
           <br></br>
           <h2>PROTECTED CONTENT</h2>

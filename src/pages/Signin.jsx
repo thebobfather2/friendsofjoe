@@ -23,7 +23,7 @@ const Signin = () => {
 
   return (
     <div>
-      <h1 className='text-center text-3xl font-bold py-8'>Sign in</h1>
+      <h1 className='text-center text-3xl font-bold py-8' style={{ paddingTop: '200px' }}>Sign in</h1>
       <div className='max-w-[240px] m-auto py-4'>
         <GoogleButton onClick={handleGoogleSignIn} />
       </div>
