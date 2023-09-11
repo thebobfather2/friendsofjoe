@@ -1,0 +1,42 @@
+/* Forum.css */
+.forum-container {
+    color: #000;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .message-list {
+    color: #000;
+    list-style-type: none;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .message-item {
+    margin: 10px 0;
+  }
+  
+  .message-form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .message-input {
+    flex: 1;
+    padding: 5px;
+  }
+  
+  .message-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .message-button:hover {
+    background-color: #0056b3;
+  }
+  

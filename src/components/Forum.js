@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { db, auth } from '../firebase'; // Update the path to your firebase.js file
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  orderBy,
+  onSnapshot,
+} from 'firebase/firestore';
+
+import './Forum.css'; // Import your CSS file
 
 const Forum = () => {
   const [messages, setMessages] = useState([]);
@@ -28,7 +38,11 @@ const Forum = () => {
     // Fetch messages from Firebase Firestore and update the state
     const fetchMessages = async () => {
       try {
-        const querySnapshot = await db.collection('messages').orderBy('timestamp', 'desc').get();
+        const q = query(
+          collection(db, 'messages'),
+          orderBy('timestamp', 'desc')
+        );
+        const querySnapshot = await getDocs(q);
         const messageData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -51,7 +65,7 @@ const Forum = () => {
 
     try {
       // Add a new message to Firebase Firestore
-      await db.collection('messages').add({
+      await addDoc(collection(db, 'messages'), {
         text: newMessage,
         timestamp: new Date(),
         userId: user.uid,
@@ -66,34 +80,33 @@ const Forum = () => {
   };
 
   return (
-    <div>
+    <div className="forum-container">
       {user ? (
         <div>
-          <h2>Welcome, {user.displayName}!</h2>
-          <form onSubmit={handleSubmit}>
+          <h2>Forum Messages</h2>
+          <ul className="message-list">
+            {messages.map((message) => (
+              <li key={message.id} className="message-item">
+                <strong>{message.userName}:</strong> {message.text}
+              </li>
+            ))}
+          </ul>
+          <form onSubmit={handleSubmit} className="message-form">
             <input
               type="text"
               placeholder="Type your message..."
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
+              className="message-input"
             />
-            <button type="submit">Post</button>
+            <button type="submit" className="message-button">
+              Post
+            </button>
           </form>
         </div>
       ) : (
         <p>Please sign in to participate in the forum.</p>
       )}
-
-      <div>
-        <h2>Forum Messages</h2>
-        <ul>
-          {messages.map((message) => (
-            <li key={message.id}>
-              <strong>{message.userName}:</strong> {message.text}
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 };

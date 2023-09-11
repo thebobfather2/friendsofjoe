@@ -9,6 +9,7 @@ import { getFirestore } from 'firebase/firestore';
 const firebaseConfig = {
   apiKey: "AIzaSyAfHwROmxtYmiV2AEVEh2zhw-Pmc7fBvT8",
   authDomain: "cimadowndemo.firebaseapp.com",
+  databaseURL: "https://cimadowndemo-default-rtdb.firebaseio.com",
   projectId: "cimadowndemo",
   storageBucket: "cimadowndemo.appspot.com",
   messagingSenderId: "76577808138",
