@@ -64,14 +64,20 @@ const Forum = () => {
     }
 
     try {
+      // Create a timestamp
+      const timestamp = new Date();
+  
       // Add a new message to Firebase Firestore
       await addDoc(collection(db, 'messages'), {
         text: newMessage,
-        timestamp: new Date(),
+        timestamp: timestamp,
         userId: user.uid,
         userName: user.displayName,
       });
-
+  
+      // Log the timestamp to the console
+      console.log('Message timestamp:', timestamp);
+  
       // Clear the input field
       setNewMessage('');
     } catch (error) {
@@ -81,33 +87,25 @@ const Forum = () => {
 
   return (
     <div className="forum-container">
-      {user ? (
-        <div className="chatBox">
-          <h2>Forum Messages</h2>
-          <ul className="message-list">
-            {messages.map((message) => (
-              <li key={message.id} className="message-item">
-                <strong>{message.userName}:</strong> {message.text}
-              </li>
-            ))}
-          </ul>
-          <form onSubmit={handleSubmit} className="message-form">
-            <input
-              type="text"
-              placeholder="Type your message..."
-              value={newMessage}
-              onChange={(e) => setNewMessage(e.target.value)}
-              className="message-input"
-            />
-            <button type="submit" className="message-button">
-              Post
-            </button>
-          </form>
-        </div>
-      ) : (
-        <p>Please sign in to participate in the forum.</p>
-      )}
-    </div>
+    {user ? (
+      <div className="chatBox">
+        <h2>Forum Messages</h2>
+        <ul className="message-list">
+          {messages.map((message) => (
+            <li key={message.id} className="message-item">
+              <strong>{message.userName}</strong>
+              <p className="message-text">{message.text}</p>
+              <span className="timestamp">
+                {message.timestamp.toDate().toLocaleString()}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : (
+      <p>Please sign in to participate in the forum.</p>
+    )}
+  </div>  
   );
 };
 
