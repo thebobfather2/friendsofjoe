@@ -1,0 +1,88 @@
+/* Forum.css */
+.forum-container {
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .chatBox {
+    border-color: #000;
+    border-width: 1rem;
+    border: solid;
+    padding: 10px;
+  }
+  
+  .message-list {
+    color: #000;
+    list-style-type: none;
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* Apply different styles to even and odd <li> elements */
+.message-item:nth-child(even) {
+    background-color: #ffffff; /* Change the background color of even items */
+    padding: 20px;
+    border: #000;
+    border: solid;
+    border-width: 1px;
+  }
+  
+  .message-item:nth-child(odd) {
+    background-color: #f2f2f2; /* Change the background color of odd items */
+    padding: 20px;
+    border-color: #000;
+    border: solid;
+    border-width: 1px;
+  }
+  
+
+  .message-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: larger;
+  }
+
+  .message-item strong {
+    margin-bottom: 5px; /* Add space between username and timestamp */
+  }
+  
+  .timestamp {
+    margin-top: 20px;
+    font-size: 0.7rem; /* Adjust timestamp font size */
+  }
+
+  
+  .message-text {
+    margin-top: 20px;
+    margin-bottom: 5px; /* Add space between username and text */
+  }
+  
+  
+
+  
+  .message-form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .message-input {
+    flex: 1;
+  }
+  
+  .message-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .message-button:hover {
+    background-color: #0056b3;
+  }
+  

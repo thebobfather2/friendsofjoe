@@ -3,6 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
 import { UserAuth } from '../context/AuthContext';
 import Forum from '../components/Forum';
+import WorldChat from '../components/WorldChat';
 import deepnotes from '../../src/img/deepnotes.png';
 import './Account.css';
 
@@ -65,6 +66,7 @@ const Account = () => {
         <p className="personalGreeting">Welcome, {user?.displayName}</p>
           <br></br>
           <Forum user={user} />
+          <WorldChat user={user} />
       </div>
       <button onClick={handleSignOut} className="logoutBtn">
         Logout
