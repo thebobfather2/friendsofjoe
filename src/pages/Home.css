@@ -1,3 +1,9 @@
+body {
+    background-color: #f0f0f0;
+    background-image: url('/src/img/cimabackground.jpeg');
+    background-size: cover;
+  }
+
 .welcome {
     font-family: 'Oleo Script', cursive;
     text-align: center;

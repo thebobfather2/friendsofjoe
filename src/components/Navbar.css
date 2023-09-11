@@ -1,8 +1,8 @@
 .nav {
-    background-color: rgb(49, 58, 144);
+    background-color: #5fa300;
     color: antiquewhite;
-    border-color: rgb(49, 58, 144);
-    border-bottom: #000220;
+    border-color: #5fa300;
+    border-bottom: #1f3500;
     border-width: 5px;
     border-style: solid;
 }
@@ -12,7 +12,7 @@
 }
 
 .navTitle {
-    text-shadow: 5px 5px #011b4f;
+    text-shadow: 5px 5px rgb(0, 31, 2);
     margin-left: 20px;
     font-family: 'Oleo Script', cursive;
     font-size: 5vw;
@@ -26,10 +26,22 @@
     font-size: 1.68vw;
 }
 
+.navLogo {
+    max-width: 100px; /* Adjust the size as needed */
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+  }
+  
+  .caption {
+    text-align: center;
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-top: 8px; /* Add spacing between the logo and caption */
+  }
+
 .signin {
     font-size: 1.2vw;
     text-shadow: 2px 2px #00000080;
-    background-color: #6a95ec;
+    background-color: #365c00;
     margin-right: 30px !important;
     border: #ffffff;
     border-radius: 10px;

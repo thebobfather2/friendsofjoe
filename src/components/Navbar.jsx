@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
+import logoImage from './cimadown.jpeg';
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -18,12 +19,8 @@ const Navbar = () => {
     <div className='nav'>
     <div className='flex justify-between bg-200 w-full'>
       <div className='navBar'>
-      <h1 className='navTitle'>
-        Deep Notes
-      </h1>
-      <h2 className='navSubtitle'>
-        Web3 news and events!
-      </h2>
+        {/* Replace <h1> and <h2> with <img> */}
+        <img src={logoImage} alt='Deep Notes Logo' className='navLogo' />
       </div>
       
       <div className='signin'>
