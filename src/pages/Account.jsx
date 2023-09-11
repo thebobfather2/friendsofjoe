@@ -3,6 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
 import { UserAuth } from '../context/AuthContext';
 import Forum from '../components/Forum';
+import deepnotes from '../../src/img/deepnotes.png';
 import './Account.css';
 
 const auth = getAuth(); // Initialize Auth
@@ -58,9 +59,9 @@ const Account = () => {
   }, []);
 
   return (
+    <div className="appMain">
     <div className="accountBox">
-      <h1 className="hello">Deep Notes</h1>
-      <div className="accountInfo">
+    <img src={deepnotes} alt="DeepNote Logo" className="logo" />       <div className="accountInfo">
         <p className="personalGreeting">Welcome, {user?.displayName}</p>
           <br></br>
           <Forum user={user} />
@@ -68,6 +69,7 @@ const Account = () => {
       <button onClick={handleSignOut} className="logoutBtn">
         Logout
       </button>
+    </div>
     </div>
   );
 };

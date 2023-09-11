@@ -82,7 +82,7 @@ const Forum = () => {
   return (
     <div className="forum-container">
       {user ? (
-        <div>
+        <div className="chatBox">
           <h2>Forum Messages</h2>
           <ul className="message-list">
             {messages.map((message) => (

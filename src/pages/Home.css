@@ -1,5 +1,3 @@
-
-
 .welcome {
   text-align: center;
   font-size: 9vh;
@@ -30,6 +28,7 @@ margin: 5rem auto
 .primary-button {
 margin-top: 5rem;
 margin-right: 1rem;
+margin-left: 1rem;
 padding: .6rem;
 width: 10rem;
 background: #222;
@@ -76,6 +75,7 @@ transition: 0.5s;
 
 #reg_btn:hover span {
 padding-right: 25px;
+padding-left: 25px;
 }
 
 #reg_btn:hover span:after {
@@ -171,7 +171,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-height: 20%;
+height: 10%;
 text-align: center;
 }
 
