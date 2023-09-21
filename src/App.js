@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Protected from './components/Protected';
 import { AuthContextProvider } from './context/AuthContext';
 import Account from './pages/Account';
+import CIMAfest from './pages/CIMAfest';
 import DeepNotes from './pages/DeepNotes';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />
         <Route path='/About' element={<About />} />
+        <Route path='/CIMAfest' element={<CIMAfest />} />
         <Route path='/DeepNotes' element={<DeepNotes />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/Subscribe' element={<Subscribe />} />

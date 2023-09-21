@@ -28,7 +28,7 @@ const Navbar = () => {
                 <div className='desktop-nav-links'>
           <Link to='/About' className='nav-link'>About Us</Link>
           <Link to='/DeepNotes' className='nav-link'>Deep Notes</Link>
-          <Link to='/bus' className='nav-link'>CIMAfest</Link>
+          <Link to='/CIMAfest' className='nav-link'>CIMAfest</Link>
           <Link to='/bus' className='nav-link'>Bus</Link>
           <Link to='/charity' className='nav-link'>Charity</Link>
         </div>
