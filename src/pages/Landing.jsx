@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar';
 const Landing = () => {
   return (
     <header style={HeaderStyle}>
-      <Navbar isVisible={false} /> {/* Pass isVisible={false} to hide the navbar */}
       <img src={deepnotes} alt="DeepNote Logo" className="logo" /> 
     <div className="buttons text-center">
         <Link to="/signin">

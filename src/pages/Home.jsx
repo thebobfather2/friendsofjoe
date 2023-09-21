@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar';
 const Home = () => {
   return (
     <header style={ HeaderStyle }>
-    <Navbar isVisible={false} /> {/* Pass isVisible={false} to hide the navbar */}
     {/* <h1 className="main-title text-center">login / register page</h1> */}
     <img src={deepnotes} alt="DeepNote Logo" className="logo" /> 
     <div className="buttons text-center">
