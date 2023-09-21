@@ -11,7 +11,7 @@ import './Account.css';
 const auth = getAuth(); // Initialize Auth
 const db = getFirestore(); // Initialize Firestore
 
-const Account = () => {
+const Forums = () => {
   const { logOut, user } = UserAuth();
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
@@ -79,4 +79,4 @@ const Account = () => {
   );
 };
 
-export default Account;
+export default Forums;

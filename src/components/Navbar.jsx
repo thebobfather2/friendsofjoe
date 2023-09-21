@@ -26,6 +26,7 @@ const Navbar = () => {
 
                 {/* Desktop Navigation Links */}
                 <div className='desktop-nav-links'>
+                <Link to='/Home' className='nav-link'>Home</Link>
           <Link to='/About' className='nav-link'>About Us</Link>
           <Link to='/DeepNotes' className='nav-link'>Deep Notes</Link>
           <Link to='/CIMAfest' className='nav-link'>CIMAfest</Link>
