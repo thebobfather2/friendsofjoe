@@ -32,6 +32,7 @@ const Navbar = () => {
           <Link to='/CIMAfest' className='nav-link'>CIMAfest</Link>
           <Link to='/TourBus' className='nav-link'>Tour Bus</Link>
           <Link to='/Charity' className='nav-link'>Charity</Link>
+          <Link to='/Forums' className='nav-link'>Forums</Link>
         </div>
         
         <div className='signin'>
