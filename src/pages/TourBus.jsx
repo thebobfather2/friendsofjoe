@@ -1,11 +1,11 @@
 import React from 'react';
 import './About.css'; // Import your About.css for styling
 
-const CIMAfest = () => {
+const TourBus = () => {
   return (
     <div className="about-container">
       <div className="about-content">
-        <h1 className="about-header">CIMAfest</h1>
+        <h1 className="about-header">Tour Bus</h1>
         <p className="about-body">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget libero ut justo vestibulum
           laoreet in et justo. Proin dictum, purus ac efficitur iaculis, dui erat fermentum augue,
@@ -21,4 +21,4 @@ const CIMAfest = () => {
   );
 };
 
-export default CIMAfest;
+export default TourBus;

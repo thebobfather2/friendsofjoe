@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Signin from './pages/Signin';
 import Subscribe from './pages/Subscribe';
+import TourBus from './pages/TourBus';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/DeepNotes' element={<DeepNotes />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/Subscribe' element={<Subscribe />} />
+        <Route path='/TourBus' element={<TourBus />} />
         <Route
           path='/account'
           element={
