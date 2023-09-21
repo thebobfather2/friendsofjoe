@@ -5,6 +5,7 @@ import { UserAuth } from '../context/AuthContext';
 import Forum from '../components/Forum';
 import WorldChat from '../components/WorldChat';
 import deepnotes from '../../src/img/deepnotes.png';
+import Pfp from '../components/Pfp';
 import './Account.css';
 
 const auth = getAuth(); // Initialize Auth
@@ -62,7 +63,9 @@ const Account = () => {
   return (
     <div className="appMain">
     <div className="accountBox">
-    <img src={deepnotes} alt="DeepNote Logo" className="logo" />       <div className="accountInfo">
+    <img src={deepnotes} alt="DeepNote Logo" className="logo" />
+    <Pfp user={user} />
+           <div className="accountInfo">
         <p className="personalGreeting">Welcome, {user?.displayName}</p>
           <br></br>
           <Forum user={user} />
