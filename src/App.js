@@ -29,12 +29,8 @@ function App() {
           <Route path='/' element={<Landing />} />
           <Route path='/Home' element={<Home />} />
           <Route path='/About' element={<About />} />
-          <Route path='/Charity' element={<Charity />} />
-          <Route path='/CIMAfest' element={<CIMAfest />} />
-          <Route path='/DeepNotes' element={<DeepNotes />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/Subscribe' element={<Subscribe />} />
-          <Route path='/TourBus' element={<TourBus />} />
           <Route
             path='/Forums'
             element={
